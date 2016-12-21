@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="progress">
+		<time-bar class="progress-bar"></time-bar>
+	</div>
+
+	<div class="button" game="gameStart()">
+		Start
+	</div>
+
+	<!-- GAME BOARD -->
+	<div class="row">
+		<div class="col-md-12">
+			
+			<ul class="hide-bullets">
+				<li ng-repeat="bricksArray in bricksMultiArray">	
+					<ul class="hide-bullets">
+						<li ng-repeat="brick in bricksArray">
+							<div class="square thumbnail col-md-2" ng-click="checkColor(brick.color)" ng-style="brick.style"></div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- CURRENT SCORE -->
+	<div class="col-md-4">
+		<h2>Score: {{points}}</h2>
+	</div>
+</div>
