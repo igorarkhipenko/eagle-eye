@@ -1,5 +1,4 @@
 app.factory('GameFactory', function() {	
-	var lives = 3;
 	var initializeColorPattern = function() {
 		var rndR = Math.floor(Math.random() * 200);
 		var rndG = Math.floor(Math.random() * 200);
@@ -65,20 +64,11 @@ app.factory('GameFactory', function() {
 		checkColor: function(colorSelect, colorPattern) {
 			if (colorSelect.toString() !== colorPattern.toString()) {
 				return true;
-			} else {
-				lives--;
-				this.checkGameOver();
-			}
-		},
-
-		checkGameOver: function() {
-			if (lives == 0) {
-				this.setGameOver();
 			}
 		},
 
 		setGameOver: function() {
-			console.log('game over');
+			return true;
 		}
 	};
 });

@@ -3,28 +3,35 @@
 		<time-bar class="progress-bar"></time-bar>
 	</div>
 
-	<div class="button" game="gameStart()">
-		Start
-	</div>
+	<game></game>
 
 	<!-- GAME BOARD -->
 	<div class="row">
-		<div class="col-md-12">
-			
+		<div class="col-sm-10">
+
+		<!-- GAME OVER SLIDE -->
+		<game-over></game-over>
+
 			<ul class="hide-bullets">
 				<li ng-repeat="bricksArray in bricksMultiArray">	
 					<ul class="hide-bullets">
 						<li ng-repeat="brick in bricksArray">
-							<div class="square thumbnail col-md-2" ng-click="checkColor(brick.color)" ng-style="brick.style"></div>
+							<div class="square thumbnail col-sm-2" ng-click="gameStart(); checkColor(brick.color)" ng-style="brick.style"></div>
 						</li>
 					</ul>
 				</li>
 			</ul>
 		</div>
-	</div>
 
-	<!-- CURRENT SCORE -->
-	<div class="col-md-4">
-		<h2>Score: {{points}}</h2>
+
+		<div class="col-sm-2 score">			
+			<div class="progress progress-bar-vertical">
+			<div class="progress-bar progress-bar-danger progress-bar-striped" ng-style="points.progress">
+				</div>
+			</div>
+			<div class="score-circle">	
+				{{points.score}}
+			</div>
+		</div>
 	</div>
 </div>
