@@ -1,17 +1,17 @@
 .hide-bullets {
-    list-style:none;
-    margin-left: -40px;
-    margin-top: 20px;
+  list-style:none;
+  margin-left: -40px;
+  margin-top: 20px;
 }
 
 .thumbnail {
-    padding-bottom : 16.67%; /* = width for a 1:1 aspect ratio */
-    margin-bottom: 0px;
+  padding-bottom : 16.67%; /* = width for a 1:1 aspect ratio */
+  margin-bottom: 0px;
 }
 
 .container {
 	max-width: 900px;
-    position: relative;
+  position: relative;
 }
 
 .progress-bar {
@@ -23,22 +23,22 @@
 }
 
 .score {
-    position: absolute;
-    height: 100%;
-    bottom: 0px;   
-    right: 0px;
+  position: absolute;
+  height: 100%;
+  bottom: 0px;   
+  right: 0px;
 }
 
 .score-circle {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    background-color: #bada55;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    line-height: 120px;
-    font-size: 50px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  background-color: #bada55;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  line-height: 120px;
+  font-size: 50px;
 }
 
 .progress-bar-vertical {
@@ -57,10 +57,39 @@
   -o-transition: height 0.6s ease;
   transition: height 0.6s ease;
 }
-
 game-over {
-    position: absolute;
-    z-index: 1;
-    width: 50%;
-    margin: 0 auto;
+  position: absolute;
+  z-index: 1;
+  width: 720px;
+  font-family: 'Sigmar One';
+}
+
+#restart {
+  font-family: initial;
+  background-color: white;
+  padding: 5px 13px;
+  margin-top: 60px;
+  border-radius: 50%;
+  transition: all linear 0.3s;
+}
+
+#restart:hover {
+  color: green;
+}
+
+#restart:active {
+  background-color: #bada55;
+}
+
+.gameOver {
+  font-size: 50px;
+  margin-top: 40%;
+  opacity: 0.9;
+  transition: all linear 0.3s;
+  background-color: lightblue;
+}
+
+.ng-hide {
+  background-color: transparent;
+  top:-300px;
 }
