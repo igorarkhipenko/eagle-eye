@@ -1,4 +1,6 @@
-<div ng-show="gameIsFinished">
-	Your score: {{points.score}}
-	<div ng-click="gameRestart()">RESTART</div>
+<div class="gameOver text-center" ng-hide="!gameIsFinished">
+	Final score: {{points.score}}
+	<div ng-click="gameRestart()">
+		<span id="restart"><i class="fa fa-undo" aria-hidden="true"></i></span>
+	</div>
 </div>
